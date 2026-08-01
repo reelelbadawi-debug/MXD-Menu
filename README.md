@@ -1,100 +1,113 @@
-# MXD مكسد — Restaurant Menu Website
+# MXD مكسد — Menu Website (Google Sheets edition)
 
-A clean, standalone React + Vite site. No backend, no accounts, no
-environment variables, no configuration of any kind. All menu content
-lives in one JSON file you edit by hand.
+A static React + Vite site whose **entire menu comes from a published
+Google Sheet** — no hardcoded items in the code, no backend, no
+environment variables. Edit the sheet → refresh the site → see the
+update. No redeploy needed for menu changes.
 
-## Quick start
+---
+
+## 1. Where the Google connection lives
+
+**One file:** `src/config/sheetConfig.js` — `SHEET_API_URL` is already set
+to your Google Apps Script Web App URL. You don't need to touch this
+again unless you redeploy the Apps Script and get a new `/exec` URL.
+
+---
+
+## 2. Set up the Google Sheet
+
+1. Create a new sheet at [sheets.google.com](https://sheets.google.com).
+2. In row 1, add these exact column headers (order doesn't matter, spelling does):
+
+   | ID | Category | Item Name | Description | Price | Image | Available | Featured | Sort Order |
+   |----|----------|-----------|-------------|-------|-------|-----------|----------|------------|
+
+3. **Fastest way to start:** don't type all this by hand — import the
+   sample file included with this project (`sample-google-sheet.csv`).
+   In Google Sheets: **File → Import → Upload** → select the file →
+   choose **"Replace current sheet"**. This drops in all 63 current
+   menu items, ready to edit from there.
+
+### Column rules
+
+- **Category** — free text (e.g. `برجر لحمة`). Whatever value you type
+  becomes a category on the site automatically. A brand-new category
+  name appears the moment you refresh the site — nothing to configure.
+- **Available** — must be exactly `TRUE` (any other value, or blank,
+  hides the item completely). Use this to instantly 86 an item without
+  deleting its row.
+- **Featured** — `TRUE` shows a gold "★ مميز" badge and moves the item
+  to the top of its category.
+- **Sort Order** — a number controlling order within its category
+  (lower = higher up). Featured items always float to the top first,
+  then Sort Order applies within each group.
+- **Price** — shown on the site exactly as typed (text, not
+  reformatted) — so `110` or `110 ج.م` both work, whatever you prefer.
+- **Image** — paste a direct image URL (upload the photo somewhere free
+  like postimages.org, imgbb.com, or imgur.com first, then copy the
+  *direct* link). Leave blank for a clean placeholder icon.
+- A category with zero `Available=TRUE` items simply won't appear on
+  the site — no need to delete the category itself.
+
+## 3. The Google Apps Script Web App
+
+This project reads the menu from a Google Apps Script Web App (deployed
+from your Sheet's **Extensions → Apps Script**, then **Deploy → New
+deployment → Web app**, access set to **Anyone**). It must return the
+sheet's rows as JSON — either a plain array of row objects, or an object
+with the array under a `data`/`items`/`values`/`result` key; the site
+reads any of these shapes.
+
+If you ever redeploy the Apps Script (new version, new URL), copy the
+new `/exec` URL into `SHEET_API_URL` in `src/config/sheetConfig.js`,
+commit, and push — that's the only case where a code change is needed.
+
+## 4. Local development
 
 ```bash
 npm install
 npm run dev
 ```
 
-Open `http://localhost:5173`.
+## 5. Deploy
 
-## Build for production
+Push to the connected GitHub repo — Vercel deploys automatically, same
+URL, same QR code as before. No environment variables to add in Vercel;
+the sheet URL lives in the code (it's a public read-only link, not a
+secret, so this is safe).
 
-```bash
-npm run build
-```
+---
 
-## Editing the menu
+## What happens in each situation
 
-Everything — restaurant info, categories, items, prices, descriptions,
-images — lives in **`src/data/menu.json`**. Open it in any text editor.
+| Situation | What customers see |
+|---|---|
+| Sheet has valid rows | Full menu, grouped by category, in your Sort Order |
+| Sheet is completely empty | "المنيو هيتحدث قريبًا" (friendly empty state, not the old menu) |
+| Sheet unreachable / network issue | "المنيو مش متاح دلوقتي" — site stays up, doesn't crash |
+| An item has `Available=FALSE` or blank | Hidden entirely |
+| A category ends up with no visible items | The whole category is hidden automatically |
 
-```json
-{
-  "restaurant": {
-    "name": "MXD مكسد",
-    "tagline": "ملوك السعادة",
-    "address": "الأقصر - طيبة، الحي الثاني",
-    "phones": ["01040016416", "01040016417"]
-  },
-  "categories": [
-    {
-      "id": "beef-burger",
-      "name": "برجر لحمة",
-      "icon": "burger",
-      "items": [
-        { "name": "كلاسيك برجر (سنجل)", "price": 110, "desc": "", "image": "" }
-      ]
-    }
-  ]
-}
-```
+## Performance note
 
-**To change a price:** find the item, edit `"price"`.
-**To add an item:** copy an existing `{ "name": ..., "price": ..., "desc": ..., "image": "" }` line inside the right category's `items` array, edit it.
-**To remove an item:** delete its line.
-**To add a whole new category:** copy a `{ "id": ..., "name": ..., "icon": ..., "items": [...] }` block and edit it. `id` must be unique and URL-safe (letters/numbers/hyphens only, no spaces).
-**To add a photo:** paste an image URL into `"image"` (upload the photo somewhere free like postimages.org, imgbb.com, or imgur.com first, and use the *direct* link).
-**Optional per-item flags** (add these keys if/when you need them): `"hidden": true` to hide an item without deleting it, `"soldOut": true` to show a "خلص" badge on it.
-
-**Available category icons:** `burger`, `wrap`, `plate`, `cup`, `bowl`, `dessert`, `fries`, `sauce`.
-
-After editing `menu.json`, restart `npm run dev` (or just rebuild/redeploy)
-to see the changes — this is a static file bundled at build time, not a
-live database.
-
-## Deploying to Vercel
-
-```bash
-npm i -g vercel
-vercel
-vercel --prod
-```
-
-Or connect your GitHub repo at vercel.com → **Add New → Project**. No
-environment variables to configure — it just builds and deploys.
-
-`vercel.json` is included for correct routing behavior if you add more
-pages later.
-
-## QR code
-
-Point your QR code at your Vercel URL once deployed. It never needs to
-change — only redeploy after editing `menu.json` if you want customers to
-see the update (the URL itself stays the same).
+The site fetches the sheet once per browser tab and caches it in
+`sessionStorage` for a few minutes (configurable via `CACHE_MINUTES` in
+`sheetConfig.js`) so refreshing the page repeatedly doesn't hammer
+Google's servers. To force an immediate refresh after an edit, a normal
+page reload after the cache window is enough — no special action needed.
 
 ## Project structure
 
 ```
 src/
-  data/menu.json         ← the only file you need to touch to update the menu
-  components/            Header, Footer, SearchBar, CategoryNav,
-                          CategorySection, MenuItem, CategoryIcon
-  pages/Home.jsx          composes everything, handles search/filter
-  styles/global.css       all design tokens (colors, fonts, spacing)
-  utils/icons.js          SVG path data for category icons
+  config/sheetConfig.js   ← the ONE file to edit (sheet URL + cache time)
+  services/sheetsService.js  fetches + parses + groups the CSV
+  hooks/useSheetMenu.js      loading/ready/error state + caching
+  components/                Header, Footer, SearchBar, CategoryNav
+                              (now a real filter), CategorySection,
+                              MenuItem, StateMessage, CategoryIcon
+  utils/categoryIcon.js      infers an icon from the category name
+  pages/Home.jsx             composes everything, search + filter logic
+  styles/global.css          all design tokens — unchanged from before
 ```
-
-## If you ever want live multi-device editing later
-
-This version is intentionally simple: edit a file, rebuild, redeploy. If
-later you want to update prices from your phone and have every customer's
-browser see it instantly without a rebuild, that requires a real backend
-(Firebase, Supabase, or similar) — a bigger, different project. Ask any
-time and it can be added without throwing away this codebase; only
-`menu.json` would be replaced by API calls, the components stay the same.
