@@ -1,0 +1,143 @@
+{
+  "restaurant": {
+    "name": "MXD مكسد",
+    "tagline": "ملوك السعادة",
+    "address": "الأقصر - طيبة، الحي الثاني",
+    "phones": ["01040016416", "01040016417"]
+  },
+  "categories": [
+    {
+      "id": "beef-burger",
+      "name": "برجر لحمة",
+      "icon": "burger",
+      "items": [
+        { "name": "كلاسيك برجر (سنجل)", "price": 110, "desc": "", "image": "" },
+        { "name": "كلاسيك برجر (دبل)", "price": 165, "desc": "", "image": "" },
+        { "name": "هالبينو برجر (سنجل)", "price": 115, "desc": "", "image": "" },
+        { "name": "هالبينو برجر (دبل)", "price": 175, "desc": "", "image": "" },
+        { "name": "تشيز برجر (سنجل)", "price": 120, "desc": "", "image": "" },
+        { "name": "تشيز برجر (دبل)", "price": 190, "desc": "", "image": "" }
+      ]
+    },
+    {
+      "id": "chicken-burger",
+      "name": "برجر فراخ",
+      "icon": "burger",
+      "items": [
+        { "name": "كلاسيك تشيكن (سنجل)", "price": 105, "desc": "", "image": "" },
+        { "name": "كلاسيك تشيكن (دبل)", "price": 165, "desc": "", "image": "" },
+        { "name": "هالبينو تشيكن (سنجل)", "price": 110, "desc": "", "image": "" },
+        { "name": "هالبينو تشيكن (دبل)", "price": 165, "desc": "", "image": "" },
+        { "name": "باربكيو تشيكن جريل (سنجل)", "price": 110, "desc": "", "image": "" },
+        { "name": "باربكيو تشيكن جريل (دبل)", "price": 175, "desc": "", "image": "" },
+        { "name": "مكسد تشيكن (سنجل)", "price": 120, "desc": "", "image": "" },
+        { "name": "مكسد تشيكن (دبل)", "price": 190, "desc": "", "image": "" }
+      ]
+    },
+    {
+      "id": "souri",
+      "name": "السوري",
+      "icon": "wrap",
+      "items": [
+        { "name": "شاورما فراخ راب", "price": 90, "desc": "", "image": "" },
+        { "name": "بوم فريت راب", "price": 55, "desc": "", "image": "" },
+        { "name": "كرانشي تشيكن راب", "price": 90, "desc": "", "image": "" },
+        { "name": "كبده راب", "price": 55, "desc": "", "image": "" },
+        { "name": "شيش طاووق راب", "price": 90, "desc": "", "image": "" },
+        { "name": "كفته راب", "price": 60, "desc": "", "image": "" },
+        { "name": "سجق راب", "price": 60, "desc": "", "image": "" }
+      ]
+    },
+    {
+      "id": "franzawy",
+      "name": "الفرنساوي",
+      "icon": "wrap",
+      "items": [
+        { "name": "شاورما فراخ", "price": 60, "desc": "", "image": "" },
+        { "name": "بوم فريت", "price": 50, "desc": "", "image": "" },
+        { "name": "كرانشي تشيكن", "price": 65, "desc": "", "image": "" },
+        { "name": "سجق", "price": 55, "desc": "", "image": "" },
+        { "name": "شيش طاووق", "price": 65, "desc": "", "image": "" },
+        { "name": "كفته", "price": 55, "desc": "", "image": "" },
+        { "name": "كبده اسكندراني", "price": 50, "desc": "", "image": "" }
+      ]
+    },
+    {
+      "id": "meals",
+      "name": "وجبات",
+      "icon": "plate",
+      "items": [
+        { "name": "وجبة فراخ مكسد", "price": 160, "desc": "أرز بسمتي، قطع فراخ مكسد، سلطة حمراء، عيش، مخلل، صوص مكسد", "image": "" },
+        { "name": "وجبة ملك السعادة", "price": 170, "desc": "أرز بسمتي، قطع مراب تشيكن، سلطة كول سلو، عيش، نومي، مخلل", "image": "" },
+        { "name": "وجبة تاج السعادة", "price": 170, "desc": "أرز بسمتي، قطع بيبس طاووق، سلطة حمراء، عيش، نومي، مخلل", "image": "" },
+        { "name": "بوكس السعادة", "price": 250, "desc": "2 ساندوتش شاورما سوري، 2 قطعة مراب تشيكن، بطاطس بوم فريت، عيش، مخلل، صوص مكسد، نومية", "image": "" },
+        { "name": "مكسد السعادة", "price": 75, "desc": "بطاطس بوم بصوص المكسد وقطع فراخ تشيكن", "image": "" },
+        { "name": "ريزو السعادة", "price": 75, "desc": "أرز مع شاورما فراخ", "image": "" }
+      ]
+    },
+    {
+      "id": "appetizers",
+      "name": "مقبلات",
+      "icon": "fries",
+      "items": [
+        { "name": "بطاطس بوم فريت", "price": 35, "desc": "", "image": "" },
+        { "name": "بطاطس تشيز فرايز", "price": 60, "desc": "", "image": "" }
+      ]
+    },
+    {
+      "id": "salads",
+      "name": "السلطات",
+      "icon": "bowl",
+      "items": [
+        { "name": "سلطة خضراء", "price": 15, "desc": "", "image": "" },
+        { "name": "كول سلو", "price": 25, "desc": "", "image": "" },
+        { "name": "طحينة", "price": 15, "desc": "", "image": "" },
+        { "name": "تومية", "price": 15, "desc": "", "image": "" }
+      ]
+    },
+    {
+      "id": "sauces",
+      "name": "صوصات",
+      "icon": "sauce",
+      "items": [
+        { "name": "صوص مكسد", "price": 15, "desc": "", "image": "" },
+        { "name": "باربكيو", "price": 15, "desc": "", "image": "" },
+        { "name": "الرانش", "price": 15, "desc": "", "image": "" },
+        { "name": "السويت تشيلي", "price": 15, "desc": "", "image": "" }
+      ]
+    },
+    {
+      "id": "desserts",
+      "name": "الحلو",
+      "icon": "dessert",
+      "items": [
+        { "name": "كنافة نوتيلا", "price": 40, "desc": "", "image": "" },
+        { "name": "كنافة وايت شوكلت", "price": 40, "desc": "", "image": "" },
+        { "name": "كنافة كراميل", "price": 40, "desc": "", "image": "" },
+        { "name": "أرز بلبن", "price": 30, "desc": "", "image": "" }
+      ]
+    },
+    {
+      "id": "drinks",
+      "name": "المشروبات",
+      "icon": "cup",
+      "items": [
+        { "name": "شاي", "price": 10, "desc": "", "image": "" },
+        { "name": "ينسون", "price": 10, "desc": "", "image": "" },
+        { "name": "قهوة تركي", "price": 20, "desc": "", "image": "" },
+        { "name": "قهوة فرنساوي", "price": 25, "desc": "", "image": "" },
+        { "name": "نسكافيه ساده", "price": 15, "desc": "", "image": "" },
+        { "name": "نسكافيه حليب", "price": 20, "desc": "", "image": "" },
+        { "name": "كابتشينو", "price": 20, "desc": "", "image": "" },
+        { "name": "كوفي مكس", "price": 15, "desc": "", "image": "" },
+        { "name": "كولا", "price": 20, "desc": "", "image": "" },
+        { "name": "فانتا", "price": 20, "desc": "", "image": "" },
+        { "name": "اسبرايت", "price": 20, "desc": "", "image": "" },
+        { "name": "شويبس", "price": 20, "desc": "", "image": "" },
+        { "name": "عصير مانجو", "price": 35, "desc": "", "image": "" },
+        { "name": "ليمون بالنعناع", "price": 25, "desc": "", "image": "" },
+        { "name": "مياه", "price": 7, "desc": "", "image": "" }
+      ]
+    }
+  ]
+}
