@@ -85,9 +85,17 @@ secret, so this is safe).
 |---|---|
 | Sheet has valid rows | Full menu, grouped by category, in your Sort Order |
 | Sheet is completely empty | "المنيو هيتحدث قريبًا" (friendly empty state, not the old menu) |
-| Sheet unreachable / network issue | "المنيو مش متاح دلوقتي" — site stays up, doesn't crash |
+| Sheet unreachable / network error | `src/data/menu.json` is shown automatically instead (63-item snapshot) — the site never shows a broken page. This fallback is silent: the layout looks identical either way. |
 | An item has `Available=FALSE` or blank | Hidden entirely |
 | A category ends up with no visible items | The whole category is hidden automatically |
+
+**Google Sheets is always the primary, live source.** `menu.json` is
+never read first and never overrides a successful live fetch — it only
+activates for that one page load if the Apps Script request fails, and
+isn't cached, so the very next reload tries the live sheet again.
+To update the fallback snapshot itself (e.g. after a big menu change),
+just overwrite `src/data/menu.json` with fresher data and redeploy —
+this is optional maintenance, not required for normal day-to-day use.
 
 ## Performance note
 

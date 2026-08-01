@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { fetchMenuFromSheet } from '../services/sheetsService';
 import { CACHE_MINUTES } from '../config/sheetConfig';
+import fallbackMenu from '../data/menu.json';
 
 const CACHE_KEY = 'mxd_sheet_menu_cache';
 
@@ -23,6 +24,12 @@ function writeCache(data) {
 }
 
 // status: 'loading' | 'ready' | 'error'
+// Google Sheets (via the Apps Script Web App) is always the PRIMARY
+// source. src/data/menu.json is only ever used as a silent fallback if
+// the live fetch fails — it is never read first, and a successful live
+// fetch is never overwritten by it. We intentionally do NOT cache the
+// fallback result, so the very next page load tries the live sheet
+// again (in case it was just a temporary hiccup).
 export function useSheetMenu() {
   const [categories, setCategories] = useState([]);
   const [status, setStatus] = useState('loading');
@@ -46,7 +53,15 @@ export function useSheetMenu() {
       })
       .catch(() => {
         if (cancelled) return;
-        setStatus('error');
+        const fallback = fallbackMenu && Array.isArray(fallbackMenu.categories)
+          ? fallbackMenu.categories
+          : null;
+        if (fallback && fallback.length > 0) {
+          setCategories(fallback);
+          setStatus('ready');
+        } else {
+          setStatus('error');
+        }
       });
 
     return () => { cancelled = true; };

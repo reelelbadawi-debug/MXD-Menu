@@ -1,0 +1,568 @@
+{
+  "categories": [
+    {
+      "id": "برجر لحمة",
+      "name": "برجر لحمة",
+      "items": [
+        {
+          "id": "fallback_1",
+          "name": "كلاسيك برجر (سنجل)",
+          "desc": "",
+          "price": "110",
+          "image": "",
+          "featured": false
+        },
+        {
+          "id": "fallback_2",
+          "name": "كلاسيك برجر (دبل)",
+          "desc": "",
+          "price": "165",
+          "image": "",
+          "featured": false
+        },
+        {
+          "id": "fallback_3",
+          "name": "هالبينو برجر (سنجل)",
+          "desc": "",
+          "price": "115",
+          "image": "",
+          "featured": false
+        },
+        {
+          "id": "fallback_4",
+          "name": "هالبينو برجر (دبل)",
+          "desc": "",
+          "price": "175",
+          "image": "",
+          "featured": false
+        },
+        {
+          "id": "fallback_5",
+          "name": "تشيز برجر (سنجل)",
+          "desc": "",
+          "price": "120",
+          "image": "",
+          "featured": false
+        },
+        {
+          "id": "fallback_6",
+          "name": "تشيز برجر (دبل)",
+          "desc": "",
+          "price": "190",
+          "image": "",
+          "featured": false
+        }
+      ]
+    },
+    {
+      "id": "برجر فراخ",
+      "name": "برجر فراخ",
+      "items": [
+        {
+          "id": "fallback_7",
+          "name": "كلاسيك تشيكن (سنجل)",
+          "desc": "",
+          "price": "105",
+          "image": "",
+          "featured": false
+        },
+        {
+          "id": "fallback_8",
+          "name": "كلاسيك تشيكن (دبل)",
+          "desc": "",
+          "price": "165",
+          "image": "",
+          "featured": false
+        },
+        {
+          "id": "fallback_9",
+          "name": "هالبينو تشيكن (سنجل)",
+          "desc": "",
+          "price": "110",
+          "image": "",
+          "featured": false
+        },
+        {
+          "id": "fallback_10",
+          "name": "هالبينو تشيكن (دبل)",
+          "desc": "",
+          "price": "165",
+          "image": "",
+          "featured": false
+        },
+        {
+          "id": "fallback_11",
+          "name": "باربكيو تشيكن جريل (سنجل)",
+          "desc": "",
+          "price": "110",
+          "image": "",
+          "featured": false
+        },
+        {
+          "id": "fallback_12",
+          "name": "باربكيو تشيكن جريل (دبل)",
+          "desc": "",
+          "price": "175",
+          "image": "",
+          "featured": false
+        },
+        {
+          "id": "fallback_13",
+          "name": "مكسد تشيكن (سنجل)",
+          "desc": "",
+          "price": "120",
+          "image": "",
+          "featured": false
+        },
+        {
+          "id": "fallback_14",
+          "name": "مكسد تشيكن (دبل)",
+          "desc": "",
+          "price": "190",
+          "image": "",
+          "featured": false
+        }
+      ]
+    },
+    {
+      "id": "السوري",
+      "name": "السوري",
+      "items": [
+        {
+          "id": "fallback_15",
+          "name": "شاورما فراخ راب",
+          "desc": "",
+          "price": "90",
+          "image": "",
+          "featured": false
+        },
+        {
+          "id": "fallback_16",
+          "name": "بوم فريت راب",
+          "desc": "",
+          "price": "55",
+          "image": "",
+          "featured": false
+        },
+        {
+          "id": "fallback_17",
+          "name": "كرانشي تشيكن راب",
+          "desc": "",
+          "price": "90",
+          "image": "",
+          "featured": false
+        },
+        {
+          "id": "fallback_18",
+          "name": "كبده راب",
+          "desc": "",
+          "price": "55",
+          "image": "",
+          "featured": false
+        },
+        {
+          "id": "fallback_19",
+          "name": "شيش طاووق راب",
+          "desc": "",
+          "price": "90",
+          "image": "",
+          "featured": false
+        },
+        {
+          "id": "fallback_20",
+          "name": "كفته راب",
+          "desc": "",
+          "price": "60",
+          "image": "",
+          "featured": false
+        },
+        {
+          "id": "fallback_21",
+          "name": "سجق راب",
+          "desc": "",
+          "price": "60",
+          "image": "",
+          "featured": false
+        }
+      ]
+    },
+    {
+      "id": "الفرنساوي",
+      "name": "الفرنساوي",
+      "items": [
+        {
+          "id": "fallback_22",
+          "name": "شاورما فراخ",
+          "desc": "",
+          "price": "60",
+          "image": "",
+          "featured": false
+        },
+        {
+          "id": "fallback_23",
+          "name": "بوم فريت",
+          "desc": "",
+          "price": "50",
+          "image": "",
+          "featured": false
+        },
+        {
+          "id": "fallback_24",
+          "name": "كرانشي تشيكن",
+          "desc": "",
+          "price": "65",
+          "image": "",
+          "featured": false
+        },
+        {
+          "id": "fallback_25",
+          "name": "سجق",
+          "desc": "",
+          "price": "55",
+          "image": "",
+          "featured": false
+        },
+        {
+          "id": "fallback_26",
+          "name": "شيش طاووق",
+          "desc": "",
+          "price": "65",
+          "image": "",
+          "featured": false
+        },
+        {
+          "id": "fallback_27",
+          "name": "كفته",
+          "desc": "",
+          "price": "55",
+          "image": "",
+          "featured": false
+        },
+        {
+          "id": "fallback_28",
+          "name": "كبده اسكندراني",
+          "desc": "",
+          "price": "50",
+          "image": "",
+          "featured": false
+        }
+      ]
+    },
+    {
+      "id": "وجبات",
+      "name": "وجبات",
+      "items": [
+        {
+          "id": "fallback_29",
+          "name": "وجبة فراخ مكسد",
+          "desc": "أرز بسمتي، قطع فراخ مكسد، سلطة حمراء، عيش، مخلل، صوص مكسد",
+          "price": "160",
+          "image": "",
+          "featured": false
+        },
+        {
+          "id": "fallback_30",
+          "name": "وجبة ملك السعادة",
+          "desc": "أرز بسمتي، قطع مراب تشيكن، سلطة كول سلو، عيش، نومي، مخلل",
+          "price": "170",
+          "image": "",
+          "featured": false
+        },
+        {
+          "id": "fallback_31",
+          "name": "وجبة تاج السعادة",
+          "desc": "أرز بسمتي، قطع بيبس طاووق، سلطة حمراء، عيش، نومي، مخلل",
+          "price": "170",
+          "image": "",
+          "featured": false
+        },
+        {
+          "id": "fallback_32",
+          "name": "بوكس السعادة",
+          "desc": "2 ساندوتش شاورما سوري، 2 قطعة مراب تشيكن، بطاطس بوم فريت، عيش، مخلل، صوص مكسد، نومية",
+          "price": "250",
+          "image": "",
+          "featured": false
+        },
+        {
+          "id": "fallback_33",
+          "name": "مكسد السعادة",
+          "desc": "بطاطس بوم بصوص المكسد وقطع فراخ تشيكن",
+          "price": "75",
+          "image": "",
+          "featured": false
+        },
+        {
+          "id": "fallback_34",
+          "name": "ريزو السعادة",
+          "desc": "أرز مع شاورما فراخ",
+          "price": "75",
+          "image": "",
+          "featured": false
+        }
+      ]
+    },
+    {
+      "id": "مقبلات",
+      "name": "مقبلات",
+      "items": [
+        {
+          "id": "fallback_35",
+          "name": "بطاطس بوم فريت",
+          "desc": "",
+          "price": "35",
+          "image": "",
+          "featured": false
+        },
+        {
+          "id": "fallback_36",
+          "name": "بطاطس تشيز فرايز",
+          "desc": "",
+          "price": "60",
+          "image": "",
+          "featured": false
+        }
+      ]
+    },
+    {
+      "id": "السلطات",
+      "name": "السلطات",
+      "items": [
+        {
+          "id": "fallback_37",
+          "name": "سلطة خضراء",
+          "desc": "",
+          "price": "15",
+          "image": "",
+          "featured": false
+        },
+        {
+          "id": "fallback_38",
+          "name": "كول سلو",
+          "desc": "",
+          "price": "25",
+          "image": "",
+          "featured": false
+        },
+        {
+          "id": "fallback_39",
+          "name": "طحينة",
+          "desc": "",
+          "price": "15",
+          "image": "",
+          "featured": false
+        },
+        {
+          "id": "fallback_40",
+          "name": "تومية",
+          "desc": "",
+          "price": "15",
+          "image": "",
+          "featured": false
+        }
+      ]
+    },
+    {
+      "id": "صوصات",
+      "name": "صوصات",
+      "items": [
+        {
+          "id": "fallback_41",
+          "name": "صوص مكسد",
+          "desc": "",
+          "price": "15",
+          "image": "",
+          "featured": false
+        },
+        {
+          "id": "fallback_42",
+          "name": "باربكيو",
+          "desc": "",
+          "price": "15",
+          "image": "",
+          "featured": false
+        },
+        {
+          "id": "fallback_43",
+          "name": "الرانش",
+          "desc": "",
+          "price": "15",
+          "image": "",
+          "featured": false
+        },
+        {
+          "id": "fallback_44",
+          "name": "السويت تشيلي",
+          "desc": "",
+          "price": "15",
+          "image": "",
+          "featured": false
+        }
+      ]
+    },
+    {
+      "id": "الحلو",
+      "name": "الحلو",
+      "items": [
+        {
+          "id": "fallback_45",
+          "name": "كنافة نوتيلا",
+          "desc": "",
+          "price": "40",
+          "image": "",
+          "featured": false
+        },
+        {
+          "id": "fallback_46",
+          "name": "كنافة وايت شوكلت",
+          "desc": "",
+          "price": "40",
+          "image": "",
+          "featured": false
+        },
+        {
+          "id": "fallback_47",
+          "name": "كنافة كراميل",
+          "desc": "",
+          "price": "40",
+          "image": "",
+          "featured": false
+        },
+        {
+          "id": "fallback_48",
+          "name": "أرز بلبن",
+          "desc": "",
+          "price": "30",
+          "image": "",
+          "featured": false
+        }
+      ]
+    },
+    {
+      "id": "المشروبات",
+      "name": "المشروبات",
+      "items": [
+        {
+          "id": "fallback_49",
+          "name": "شاي",
+          "desc": "",
+          "price": "10",
+          "image": "",
+          "featured": false
+        },
+        {
+          "id": "fallback_50",
+          "name": "ينسون",
+          "desc": "",
+          "price": "10",
+          "image": "",
+          "featured": false
+        },
+        {
+          "id": "fallback_51",
+          "name": "قهوة تركي",
+          "desc": "",
+          "price": "20",
+          "image": "",
+          "featured": false
+        },
+        {
+          "id": "fallback_52",
+          "name": "قهوة فرنساوي",
+          "desc": "",
+          "price": "25",
+          "image": "",
+          "featured": false
+        },
+        {
+          "id": "fallback_53",
+          "name": "نسكافيه ساده",
+          "desc": "",
+          "price": "15",
+          "image": "",
+          "featured": false
+        },
+        {
+          "id": "fallback_54",
+          "name": "نسكافيه حليب",
+          "desc": "",
+          "price": "20",
+          "image": "",
+          "featured": false
+        },
+        {
+          "id": "fallback_55",
+          "name": "كابتشينو",
+          "desc": "",
+          "price": "20",
+          "image": "",
+          "featured": false
+        },
+        {
+          "id": "fallback_56",
+          "name": "كوفي مكس",
+          "desc": "",
+          "price": "15",
+          "image": "",
+          "featured": false
+        },
+        {
+          "id": "fallback_57",
+          "name": "كولا",
+          "desc": "",
+          "price": "20",
+          "image": "",
+          "featured": false
+        },
+        {
+          "id": "fallback_58",
+          "name": "فانتا",
+          "desc": "",
+          "price": "20",
+          "image": "",
+          "featured": false
+        },
+        {
+          "id": "fallback_59",
+          "name": "اسبرايت",
+          "desc": "",
+          "price": "20",
+          "image": "",
+          "featured": false
+        },
+        {
+          "id": "fallback_60",
+          "name": "شويبس",
+          "desc": "",
+          "price": "20",
+          "image": "",
+          "featured": false
+        },
+        {
+          "id": "fallback_61",
+          "name": "عصير مانجو",
+          "desc": "",
+          "price": "35",
+          "image": "",
+          "featured": false
+        },
+        {
+          "id": "fallback_62",
+          "name": "ليمون بالنعناع",
+          "desc": "",
+          "price": "25",
+          "image": "",
+          "featured": false
+        },
+        {
+          "id": "fallback_63",
+          "name": "مياه",
+          "desc": "",
+          "price": "7",
+          "image": "",
+          "featured": false
+        }
+      ]
+    }
+  ]
+}
