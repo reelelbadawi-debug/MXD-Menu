@@ -1,4 +1,4 @@
-// Path data for each category icon key used in menu.json ("icon" field).
+// Path data for each category icon key, matched via utils/categoryIcon.js.
 export const ICONS = {
   fries: 'M6,30 L6,10 M11,30 L11,7 M16,30 L16,10 M21,30 L21,8 M4,30 L23,30',
   dessert: 'M6,10 L24,10 L15,26 Z M15,26 L15,30 M9,30 L21,30',
